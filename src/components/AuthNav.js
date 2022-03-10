@@ -1,11 +1,11 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const styles = {
-  textDecoration: 'none',
-  color: 'white',
-  marginLeft: '20px',
-  fontSize: '24px',
+  textDecoration: "none",
+  color: "white",
+  marginLeft: "20px",
+  fontSize: "24px",
   fontWeight: 500,
 };
 
@@ -16,7 +16,7 @@ export default function AuthNav() {
         Registration
       </NavLink>
       <NavLink style={styles} to="/login" exact>
-        Login
+        Log in
       </NavLink>
     </div>
   );

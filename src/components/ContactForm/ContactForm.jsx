@@ -72,7 +72,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
         </Form.Group>
-        <Button variant="primary" type="submit" size="sm">
+        <Button variant="primary" type="submit">
           Add contact
         </Button>
       </Form>

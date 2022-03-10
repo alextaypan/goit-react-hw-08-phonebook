@@ -1,18 +1,19 @@
 import styled from "@emotion/styled";
 
 export const Thumb = styled.div`
-  min-height: "calc(100vh - 50px)";
-  display: flex;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-
-  max-width: 440px;
-  height: 320px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  display: block;
+  text-align: center;
+  margin-top: 50px;
 `;
 
-export const Title = styled.h3`
+export const Title = styled.h1`
   margin-top: 10px;
+  font-weight: 400;
+  font-size: 35px;
+`;
+
+export const SecondTitle = styled.h2`
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 30px;
 `;
