@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
 export const List = styled.ol`
   max-width: 300px;
@@ -9,15 +9,11 @@ export const List = styled.ol`
 
 export const ListItem = styled.li`
   margin-bottom: 8px;
-
-  @media screen and (min-width: 400px) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  } 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Span = styled.span`
   display: inline-block;
 `;
-
