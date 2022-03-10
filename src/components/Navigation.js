@@ -1,13 +1,13 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import { authSelectors } from '../redux/auth';
+import React from "react";
+import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
+import authSelectors from "../redux/auth/auth-selectors";
 
 const styles = {
-  textDecoration: 'none',
-  color: 'white',
-  marginLeft: '20px',
-  fontSize: '24px',
+  textDecoration: "none",
+  color: "white",
+  marginLeft: "20px",
+  fontSize: "24px",
   fontWeight: 500,
 };
 

@@ -1,38 +1,53 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { authOperations } from '../../redux/auth';
-import { Form, Button } from 'react-bootstrap';
-import { Thumb } from './LoginView.styled.jsx';
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import authOperations from "../../redux/auth/auth-operations";
+import { Form, Button } from "react-bootstrap";
+import { Thumb } from "./RegisterView.styled.jsx";
+import { v4 as uuidv4 } from "uuid";
 
-export default function LoginView() {
+export default function RegisterView() {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleChange = ({ target: { name, value } }) => {
     switch (name) {
-      case 'email':
+      case "name":
+        return setName(value);
+      case "email":
         return setEmail(value);
-      case 'password':
+      case "password":
         return setPassword(value);
       default:
         return;
     }
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(authOperations.logIn({ email, password }));
-    setEmail('');
-    setPassword('');
+    dispatch(authOperations.register({ name, email, password }));
+    setName("");
+    setEmail("");
+    setPassword("");
   };
 
   return (
     <Thumb>
-      <h3>Sign in to continue</h3>
-
+      <h3>Create account</h3>
       <Form onSubmit={handleSubmit} autoComplete="off">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId={uuidv4()}>
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            placeholder="Enter name"
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId={uuidv4()}>
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
@@ -56,9 +71,8 @@ export default function LoginView() {
             placeholder="Password"
           />
         </Form.Group>
-
         <Button variant="primary" type="submit">
-          Sign in
+          Sign up
         </Button>
       </Form>
     </Thumb>

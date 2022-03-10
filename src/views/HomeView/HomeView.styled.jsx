@@ -1,20 +1,18 @@
-import styled from '@emotion/styled';
-import img from './image/phone3.jpg';
+import styled from "@emotion/styled";
 
 export const Thumb = styled.div`
-   min-height: 'calc(100vh - 50px)';
-   display: flex;
-   justify-content: center;
-   margin-left: auto;
-   margin-right: auto;
-   /* background-image: url(${img}); */
+  min-height: "calc(100vh - 50px)";
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 
-   max-width: 440px;
-   height: 320px;
-   background-size: cover;
-   background-repeat: no-repeat;
+  max-width: 440px;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 export const Title = styled.h3`
-   margin-top: 10px;
+  margin-top: 10px;
 `;
