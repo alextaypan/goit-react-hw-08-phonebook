@@ -11,19 +11,19 @@ import PublicRoute from "./components/PublicRoute";
 import authSelectors from "./redux/auth/auth-selectors";
 
 const HomeView = lazy(() =>
-  import("./views/HomeView/HomeView" /* webpackChunkName: "home-page" */)
+  import("./views/HomeView/HomeView" /* webpackChunkName: "home-view" */)
 );
 const RegisterView = lazy(() =>
   import(
-    "./views/RegisterView/RegisterView" /* webpackChunkName: "register-page" */
+    "./views/RegisterView/RegisterView" /* webpackChunkName: "register-view" */
   )
 );
 const LoginView = lazy(() =>
-  import("./views/LoginView/LoginView" /* webpackChunkName: "login-page" */)
+  import("./views/LoginView/LoginView" /* webpackChunkName: "login-view" */)
 );
 const ContactsView = lazy(() =>
   import(
-    "./views/ContactsView/ContactsView" /* webpackChunkName: "contacts-page" */
+    "./views/ContactsView/ContactsView" /* webpackChunkName: "contacts-view" */
   )
 );
 
