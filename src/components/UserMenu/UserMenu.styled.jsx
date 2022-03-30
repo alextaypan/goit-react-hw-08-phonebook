@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
+import styled from "styled-components";
 
 export const Thumb = styled.div`
-  display: 'flex';
-  align-items: 'center';
+  display: "flex";
+  align-items: "center";
 `;
 
 export const Avatar = styled.img`
